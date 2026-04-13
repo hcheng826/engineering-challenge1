@@ -80,6 +80,7 @@ npm install
 
 # Start the server
 npm start
+```
 
 ---
 Here's a summary of what was implemented:                                                                                                                                                                      
