@@ -80,3 +80,22 @@ npm install
 
 # Start the server
 npm start
+
+---
+Here's a summary of what was implemented:                                                                                                                                                                      
+                                                                                                                                                                                                                   
+  GET /api/ClaudeApiTest in src/index.js:                                                                                                                                                                        
+  - Connects to Ethereum mainnet via ethereum.publicnode.com (free public RPC)                                                                                                                                     
+  - Calls totalSupply(), decimals(), and symbol() on the USDC ERC-20 contract (0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48)                                                                                         
+  - Prints fetched data to console and returns JSON                                                                                                                                                                
+                                                                                                                                                                                                                   
+  Verified output:                                              
+  {                                                                                                                                                                                                                
+    "contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",   
+    "totalSupply": "55427899020734496",                                                                                                                                                                            
+    "totalSupplyFormatted": "55427899020.734496",               
+    "decimals": 6,                                                                                                                                                                                                 
+    "symbol": "USDC"                                                                                                                                                                                               
+  }                                                                                                                                                                                                                
+                                                                                                                                                                                                                   
+  Also added test_endpoint.js — a standalone test that spins up a minimal server, hits the endpoint, and exits cleanly (useful for demos/screenshots).
